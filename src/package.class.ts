@@ -38,6 +38,9 @@ export class Package {
     if(typeof this.bugs == 'object' && this.bugs !== null) json['bugs'] = this.bugs;
     if(typeof this.homepage == 'string') json['homepage'] = this.homepage;
 
+    json['dependencies'] = this.dependencies.getDependencies()
+    json['devDependencies'] = this.devDependencies.getDependencies()
+
     return json
   }
 

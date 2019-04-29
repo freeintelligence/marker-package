@@ -10,7 +10,7 @@ export class Dependencies {
   private strict_dependencies: { [type: string]: { name: string, version: string } } // Container
   private nonstrict_dependencies: { [name: string]: string } // Container
 
-  constructor(types: string[] = null) {
+  constructor(types: string[] = undefined) {
     this.restart()
     this.setTypes(types)
   }
@@ -19,7 +19,7 @@ export class Dependencies {
    * Restart
    * */
   restart() {
-    this.types = undefined
+    this.types = null
     this.versions = { }
     this.strict_dependencies = { }
     this.nonstrict_dependencies = { }
@@ -90,6 +90,23 @@ export class Dependencies {
     else {
       this.nonstrict_dependencies[name] = version
     }
+
+    return this
+  }
+
+  /*
+   * Get all dependencies
+   * */
+  getDependencies(): { [name: string]: string } {
+    if(!this.strictMode()) return this.nonstrict_dependencies;
+
+    const dependencies: { [name: string]: string } = { }
+
+    for(let type in this.strict_dependencies) {
+      dependencies[this.strict_dependencies[type].name] = this.strict_dependencies[type].version
+    }
+
+    return dependencies
   }
 
   /*
