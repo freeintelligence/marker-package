@@ -1,7 +1,7 @@
 {
-  "name": "typescript-starter-kit",
-  "version": "1.0.0",
-  "description": "Base project to start a development with typescript, compiler and other options.",
+  "name": "package-marker",
+  "version": "1.0.0-rc.1",
+  "description": "Generator of files package.json with its configurations and advanced for dependencies.",
   "main": "index.js",
   "devDependencies": {
     "@types/node": "^11.13.6",
@@ -29,11 +29,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/freeintelligence/typescript-starter-kit.git"
+    "url": "git+https://github.com/freeintelligence/marker-package.git"
   },
   "bugs": {
-    "url": "https://github.com/freeintelligence/typescript-starter-kit/issues"
+    "url": "https://github.com/freeintelligence/marker-package/issues"
   },
-  "homepage": "https://github.com/freeintelligence/typescript-starter-kit#readme",
+  "homepage": "https://github.com/freeintelligence/marker-package#readme",
   "license": "ISC"
 }
