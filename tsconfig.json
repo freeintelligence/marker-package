@@ -9,13 +9,13 @@
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es5",
-    "types": ["node"],
+    "target": "es6",
+    "types": ["node", "jest"],
     "typeRoots": [
       "node_modules/@types"
     ],
     "lib": [
-      "es5",
+      "es6",
       "dom"
     ],
     "paths": {
