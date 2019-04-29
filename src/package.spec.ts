@@ -4,7 +4,7 @@ describe('Package instance', () => {
 
   const pkg = new Package()
 
-  test('eh', () => {
+  test('test', () => {
 
   })
 })

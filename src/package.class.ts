@@ -1,3 +1,5 @@
+import { Dependencies } from './dependencies.class'
+
 /*
  * Package class
  * */
@@ -14,8 +16,8 @@ export class Package {
   repository: { type: string, url: string }
   bugs: { url: string }
   homepage: string
-  dependencies: any
-  devDependencies: any
+  dependencies: Dependencies = new Dependencies()
+  devDependencies: Dependencies = new Dependencies()
 
   constructor() {
 
