@@ -16,6 +16,7 @@ export class Package {
   repository: { type: string, url: string }
   bugs: { url: string }
   homepage: string
+  bin: { [name: string]: string }
   dependencies: Dependencies = new Dependencies()
   devDependencies: Dependencies = new Dependencies()
 
@@ -37,6 +38,7 @@ export class Package {
     if(typeof this.repository == 'object' && this.repository !== null) json['repository'] = this.repository;
     if(typeof this.bugs == 'object' && this.bugs !== null) json['bugs'] = this.bugs;
     if(typeof this.homepage == 'string') json['homepage'] = this.homepage;
+    if(typeof this.bin == 'object' && this.bin !== null) json['bin'] = this.bin
 
     json['dependencies'] = this.dependencies.getDependencies()
     json['devDependencies'] = this.devDependencies.getDependencies()

@@ -1,6 +1,6 @@
 {
   "name": "package-marker",
-  "version": "1.0.0-rc.1",
+  "version": "1.0.0-rc.2",
   "description": "Generator of files package.json with its configurations and advanced for dependencies.",
   "main": "index.js",
   "devDependencies": {
